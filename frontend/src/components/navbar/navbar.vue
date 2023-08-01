@@ -1,7 +1,7 @@
 <template>
     <v-card>
         <v-layout>
-            <v-app-bar color="primary" prominent>
+            <v-app-bar color="primary" >
                 <v-toolbar-title>My files</v-toolbar-title>
                 <router-link to="/marca">
                     <v-list-item title="Marca" value="Marca"></v-list-item>

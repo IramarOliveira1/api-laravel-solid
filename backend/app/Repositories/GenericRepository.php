@@ -13,7 +13,7 @@ abstract class GenericRepository
 
     public function all()
     {
-        return $this->entity->all();
+        return $this->entity->paginate(6);
     }
 
     public function save($attributes)

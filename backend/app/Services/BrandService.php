@@ -48,8 +48,12 @@ class BrandService
 
     public function delete($id)
     {
-        $this->repository->delete($id);
+        try {
+            $this->repository->delete($id);
 
-        return response()->json(['message' => 'Marca excluida com sucesso!']);
+            return response()->json(['message' => 'Marca excluida com sucesso!']);
+        } catch (Exception $e) {
+            return response()->json(['message' => $e->getMessage()], 400);
+        }
     }
 }
